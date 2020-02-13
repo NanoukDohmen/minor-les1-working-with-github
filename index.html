@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Ugly ass diglett Pokemon -->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smileyface</title>
+</head>
+<style>
+.imaginational-stones{
+    left:80px;
+    background-color:#80817c; 
+    width:600px; 
+    height:100px; 
+    z-index:2; 
+    position: relative;
+}
+.face{
+    z-index:1;
+    background-color:#a58971;
+    border:2px solid #000;
+    width:400px;
+    height:500px;
+    border-radius:40% 40% 0 0;
+    position: relative;
+    left:200px;
+    top:50px;
+}
+.left-eye, .right-eye{
+    z-index:2; 
+    background-color:#32292c;
+    border:2px solid #000;
+    width:40px;
+    height:80px;
+    border-radius:45%;
+    position: absolute;
+}
+.left-eye{left:80px; top:120px;}
+.right-eye{right:170px; top:120px;}
+.white{z-index:2; margin:2px 0 0 2px; background-color:#fff; width: 20px; height:40px; border-radius: 50%;}
+#nose{
+    z-index:2; 
+    background-color:#ba82a7;
+    border:2px solid #000;
+    width:140px;
+    height:70px;
+    border-radius: 50%;
+    position: absolute;
+    top:220px;
+    left:80px;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+#mouth{
+    z-index:2; 
+    border:5px solid #000;
+    border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+    border-top:0;
+    width:100px;
+    height:30px;
+    position: absolute;
+    bottom:120px;
+    left:100px;
+}
+.tooth{
+    z-index:2; 
+    display:none;
+    background-color: #fff;
+    border:2px solid #000;
+    border-top:none;
+    width:20px;
+    height:15px;
+    border-radius:10px;
+    position: absolute;
+    bottom:135px;
+    left:120px;
+}
+.face:hover{cursor:help;}
+.face:hover #mouth{transform: rotate(180deg);}
+.face:hover .tooth{display: block;}
+#nose:hover{
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    background-color:red;
+}
+#hovernose{
+    position:absolute;
+    font-size:10px;
+    left:40px;
+    top:30px;
+}
+img{margin-left:200px;width:80px;}
+</style>
+<body>
+    <div class="face">
+        <div class="left-eye"><div class="white"></div></div>
+        <div class="right-eye"><div class="white"></div></div>
+        <div id="nose"><span id="hovernose">Hover my nose</span></div>
+        <div id="mouth"></div>
+        <div class="tooth"></div>
+    </div>
+    <div class="imaginational-stones"></div>
+    <h1>Voorbeeld diglett pokemon</h1>
+    <img src="img/diglett.jpg" alt="diglett pokemon original">
+</body>
